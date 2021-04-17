@@ -2,12 +2,12 @@ import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IcBack } from '../../../assets'
 
-const Header = ({ title, subtitle, onBack }) => {
+const Header = ({ title, subtitle, onBack, navigation }) => {
    return (
       <View style={styles.container}>
          {
             onBack && (
-               <TouchableOpacity activeOpacity={0.7} >
+               <TouchableOpacity activeOpacity={0.7} onPress={() => navigation.navigate('SplashScreen')}>
                   <View style={styles.klikkecil}>
                      {/* <IcBack /> */}
                      <Image

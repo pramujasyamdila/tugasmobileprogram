@@ -1,32 +1,28 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import { Button, Gap, Header, TextInput } from '../../component'
+import { StyleSheet, View } from 'react-native'
+import { Button, Gap, Header, Select, TextInput } from '../../component'
 
-const SignUp = ({ navigation }) => {
+const SignUpAddress = ({ navigation }) => {
    return (
       <View style={{ flex: 1 }}>
-         <Header title="Sign Up" onBack={() => { }} subtitle="Create Your Account" />
+         <Header title="Sign Up Address" onBack={() => { }} subtitle="Create Your Address" />
          <View style={styles.container}>
-            <View style={styles.poto}>
-               <View style={styles.borderpoto}>
-                  <View style={styles.garis}>
-                     <Text style={styles.addphoto}>Add Photo</Text>
-                  </View>
-               </View>
-            </View>
-            <TextInput label="Your Email" inputdia="Entry Your Email" />
+            <TextInput label="Phone Number" inputdia="Phone Number" />
             <Gap height={16} />
-            <TextInput label="Your Password" inputdia="Entry Your Password" />
+            <TextInput label="Address" inputdia="Entry Your Address" />
             <Gap height={16} />
-            <TextInput label="Full Name" inputdia="Entry Your FullName" />
+            <TextInput label="House No." inputdia="Entry Number House" />
             <Gap height={16} />
-            <Button text="Continue" textColor="white" color="#2F4F4F" onPress={() => navigation.navigate('SignUpAddress')} />
+            <TextInput label="" inputdia="Entry Your FullName" />
+            <Gap height={16} />
+            <Select label="City" />
+            <Button text="SignUp" textColor="white" color="#2F4F4F" onPress={() => navigation.replace('SuccessSignUp')} />
          </View>
       </View>
    )
 }
 
-export default SignUp
+export default SignUpAddress
 
 const styles = StyleSheet.create({
    pages: {
@@ -59,4 +55,3 @@ const styles = StyleSheet.create({
       marginBottom: 10
    }
 })
-
